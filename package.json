@@ -1,9 +1,9 @@
 {
   "name": "rhl-sandbox",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sandbox for debugging RHL issues",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -24,6 +24,8 @@
     "webpack-dev-middleware": "^3.7.0",
     "webpack-hot-middleware": "^2.25.0"
   },
-  "author": "",
-  "license": "MIT"
+  "repository": "vitalyq/rhl-sandbox",
+  "author": "Vitaly Kuznetsov",
+  "license": "MIT",
+  "private": true
 }
