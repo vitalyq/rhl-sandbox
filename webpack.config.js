@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
 
 const src = path.join(__dirname, 'src');
 const dist = path.join(__dirname, 'dist');
@@ -8,8 +9,9 @@ const dist = path.join(__dirname, 'dist');
 module.exports = {
   mode: 'development',
   entry: [
+    'webpack-hot-middleware/client',
     'react-hot-loader/patch',
-    './src/index'
+    './src/client'
   ],
   output: {
     path: dist,
@@ -29,8 +31,7 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    contentBase: dist,
-    hot: true
-  }
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
